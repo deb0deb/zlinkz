@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Zazzle Links</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 520px; margin: 0 auto; padding: 24px 16px; background: #faf7fb; color: #222; }
+  h1 { font-size: 1.5rem; text-align: center; }
+  a.btn { display: block; margin: 12px 0; padding: 16px; border-radius: 10px; text-align: center; text-decoration: none; color: #fff; font-weight: 600; }
+  .pink { background: #d6559a; } .blue { background: #3a78c9; } .purple { background: #7a4cc2; }
+</style>
+</head>
+<body>
+<h1>Square Souvenir Keychains</h1>
+<div id="links"></div>
+<script>
+  const REF = "238165150998235205";
+  const items = [
+    ["Pink Accent On Point Keychain", "pink", "https://www.zazzle.com/pink_accent_on_point_square_souvenir_keychain-256758424134102204"],
+    ["Blue Accent On Point Keychain", "blue", "https://www.zazzle.com/blue_accent_on_point_square_souvenir_keychain-256740222599825404"],
+    ["Purple Accent On Point Keychain", "purple", "https://www.zazzle.com/purple_accent_on_point_square_souvenir_keychain-256693084839104074"]
+  ];
+  const box = document.getElementById("links");
+  for (const [label, cls, url] of items) {
+    const a = document.createElement("a");
+    a.className = "btn " + cls;
+    a.textContent = label;
+    a.href = url + "?rf=" + REF;
+    box.appendChild(a);
+  }
+</script>
+</body>
+</html>
